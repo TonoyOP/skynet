@@ -1,0 +1,657 @@
+
+@font-face {
+    font-family: Gilroy;
+    src: url(Assets/Fonts/Gilroy-Light.otf);
+}
+/*======== BOILER PLATE  ========*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Gilroy;
+} 
+
+body,html{
+
+    width: 100%;
+    height: 100%;  
+    z-index: 1;
+    background-image: linear-gradient( 109.6deg,  rgba(0, 0, 0, 0.9) 25%, rgba(102,51,153,1) 90.2% ); 
+    
+}
+
+/* FRONT UI CODE*/
+
+.frontUi{
+
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.blurEffect{
+
+    position: absolute;
+    width: 100%;
+    height: 520vh;
+    backdrop-filter: blur(50px);
+    z-index: 1;
+}
+
+.nav{
+
+    display: flex;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 2% ;
+
+}
+
+.navList ul li a, .nav .logo{
+
+    text-decoration: none;
+    color: white !important;
+    font-family: Gilroy;
+    transition: all .5s;
+    
+}
+
+.navList ul{
+
+    display: flex;
+    list-style: none;
+    gap: 3vw;
+    align-items: center;
+}
+
+.navList ul li a{
+
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+
+.navList ul li a:hover, .nav .logo:hover{
+
+    color: rgb(198, 72, 198) !important;
+}
+
+
+
+
+.nav .logo{
+
+    font-size: 3vw;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#conBtn{
+
+    
+    text-decoration: none;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 1.1vw;
+    padding: 12px 16px;
+    font-family: Gilroy;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+#conBtn:hover{
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(125, 0, 125);
+}
+
+.fronUi-main{
+
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    gap: 0;
+    position: relative;
+}
+
+
+.fronUi-main-cont, 
+.fronUi-graph{
+
+    width: 50%;
+    height: 100%;
+}
+
+.fronUi-main-cont{
+
+   
+    z-index: 4;
+    font-family: Gilroy;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5vw;
+    padding-top: 2%;
+    margin-left: 10%;
+  
+}
+
+
+.frontUi-main-txt{
+
+    font-size: 3vw;
+    font-style: 550;
+    color: white;
+
+   
+}
+
+.frontUi-sub-txt{
+
+    color: white;
+    font-size: 1.1vw;
+    margin: 0 23%;
+    /*margin-left: 9%;*/
+    margin-left: 0;
+}
+
+.frontUi-btns{
+
+    display: flex;
+    gap: 4vw;
+}
+
+.frontUi-btns a{
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 550;
+    padding: 10px 20px ;
+    
+   
+}
+
+.frontUi-btns a:nth-child(1){
+
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    color: white;
+    border: 2px solid purple;
+    transition: all .8s;
+
+}
+
+.frontUi-btns #startBtn:hover{
+
+   
+    box-sizing: border-box;
+    background-color: rgb(125, 0, 156);
+    border: 2px solid black;
+   
+
+}
+
+::selection{
+
+    background-color: purple;
+}
+
+.fronUi-graph{
+
+    /*background-color: red;*/
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+/*  BOX CODE */
+
+.box{
+
+    width: 12vw;
+    height: 14vw;
+    background-color: transparent;
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgb(204, 95, 255);
+    
+
+}
+
+.box img{
+
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+
+
+}
+
+#b-1{
+
+    z-index: 10;
+  
+    top: 60px;
+    left: 35px;
+    transform: rotate(6deg);
+}
+
+#b-2{
+
+    z-index: 9;
+    left: 150px ;
+    top: 200px;
+    
+    transform: rotate(26deg);
+
+}
+
+#b-3{
+
+    z-index: 8;
+   bottom: 30px;
+   
+
+}
+
+#b-4{
+
+    z-index: 7;
+    top: 100px;
+    transform: rotate(-25deg);
+
+}
+
+
+#b-5{
+
+    z-index: 6;
+    left: 40px;
+    bottom: 40px;
+    transform: rotate(-26deg);
+
+}
+
+#menuI{
+
+    font-size: 3vw;
+    display: none;
+}
+
+
+/*====  TESTI SECTION CODE  ====*/
+
+.testiSection{
+
+    width: auto;
+    height: 25vh;
+    margin: 5% 10%;
+   background-color: rgba(138, 138, 138, 0.105);
+    border-radius: 20px;
+    z-index: 1 !important;
+    position: relative;
+  
+    
+}
+
+
+.testi-numbers{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10vw;
+    box-shadow: 10px 5px 30px rgb(204, 95, 255);
+    border-radius: 30px;
+}
+
+.testi-txt{
+
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;;
+}
+
+.number{
+
+    font-size: 4vw;
+    color: white;
+    font-weight: bolder;
+}
+
+/*====  TREND SECTION CODE  ====*/
+
+
+.trendSection{
+
+    margin: 2% 9%;
+    margin-top: 15%;
+    width: auto;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+    z-index: 99;
+    position: relative;
+}
+
+.trendImg{
+
+    filter: drop-shadow(5px 10px 20px rgb(146, 51, 150));
+}
+
+.trendTxt{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+ 
+}
+
+.trendTxt h2{
+
+    color: rgb(2, 187, 2);
+    font-size: 1.2vw;
+}
+
+.trendTxt h1{
+
+    color: white;
+    font-size: 4.5vw;
+    font-weight: bolder;
+
+}
+
+.sub-txt-trend{
+
+    color: white;
+    font-size: 1.1vw;
+
+}
+
+.trendTxt a{
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+/*====  TOP SECTION CODE  ====*/
+
+
+.topSection{
+
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    z-index: 99;
+    padding: 0% 9%;
+   margin-top: 15%;
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+    
+   
+}
+
+.topTxt h2{
+
+    color:rgb(2, 187, 2);
+    font-size: 1.1vw;
+}
+
+.topTxt{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.topTxt h1{
+
+    color: white;
+    font-weight: bolder;
+    font-size: 5vw;
+}
+
+.SubTopTxt{
+
+    color: white;
+    font-size: 1.1vw;
+}
+
+.topCont{
+
+    width: 20vw;
+    height: 23vw;
+    background-color: rgba(0, 0, 0, 0.367);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 5px 5px 20px rgb(204, 95, 255);
+}
+
+.topCont .name{
+
+    color: white;
+    font-weight: 900;
+    font-size: 2vw;
+  
+ 
+}
+
+.topCont img{
+
+    object-fit: cover;
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    
+}
+
+.topCont #secImg{
+
+    object-fit: cover;
+    width: 100%;
+    height: 40%;
+    border-radius: 10%;
+}
+
+/*====  BRAND SECTION CODE  ====*/
+
+
+.brand-section{
+
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    position: relative;
+    z-index: 99;
+   
+
+}
+
+.brand-section h1{
+
+    text-align: center;
+    color: white;
+    font-weight:bolder;
+    font-size: 5vw;
+    
+}
+
+.main-brand-sec{
+
+    display: flex;
+    margin-top: 5%;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#megaLogo img{
+
+    width: 15vw;
+    height: 3vw;
+}
+
+#unrealLogo img{
+
+    width: 8vw;
+    height: 5vw;
+}
+
+#metaMLogo img{
+
+    width: 15vw;
+    height: 3vw;
+}
+
+#binanceLogo img{
+
+    width: 14vw;
+    height: 8vw;
+}
+
+#oculusLogo img{
+
+    width: 12vw;
+    height: 5vw;
+}
+
+
+/*====  SUBSCRIBE TEXT SECTION CODE  ====*/
+
+.subs-txt{
+
+    color: white;
+    position: relative;
+    z-index: 99;
+    width: auto;
+    height: auto;
+    margin: 0% 9%;
+    margin-top: 15%;
+    font-size: 7vw;
+    font-weight: bolder;
+
+}
+
+.subBtn a{
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.2vw;
+    background-color: purple;
+    padding: 12px 26px ;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    transition: all .8s;
+
+}
+
+.subBtn a:hover{
+
+    border: 3px solid purple;
+    background-color: transparent;
+}
+
+
+/*====  FOOTER CODE  ====*/
+
+.footer{
+
+    height: 45vh;
+    position: relative;
+    z-index: 99;
+    border-top: 2px solid white;
+    padding-top: 4%;
+    
+}
+
+.social-footer-section{
+
+    display: flex;
+    flex-direction:column;
+    gap: 1.5vw;
+}
+
+.social-footer-section h2{
+
+    font-size: 1vw;
+}
+.social-footer-section h1{
+
+    font-size: 3vw;
+    font-weight: bolder;
+}
+.social-media-icons img{
+
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-media-icons{
+
+    display: flex;
+    gap: 2vw;
+}
+
+.footer{
+
+    display: flex;
+    margin: 0% 10%;
+    margin-top: 10%;
+    gap: 8vw;
+    color: white;
+}
+
+.first-link-set,
+.second-link-set, 
+.third-link-set, 
+.fourth-link-set{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+    
+}
+
+.first-link-set h1,
+.second-link-set h1, 
+.third-link-set h1, 
+.fourth-link-set h1{
+
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+
+.first-link-set a,.second-link-set a, .third-link-set a, .fourth-link-set a{
+
+    color: white;
+    text-decoration: none;
+}
+
+
